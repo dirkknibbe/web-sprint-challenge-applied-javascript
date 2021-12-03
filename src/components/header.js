@@ -31,13 +31,13 @@ const Header = (title, date, temp) => {
   //    <span class="temp">{ temp }</span>
   //  </div>
   //
-  return header;
-  
+  return header; 
 };
 
 const headerAppender = (selector) => {
 
-
+  const newHeader = document.querySelector(selector);
+    newHeader.appendChild(Header());
 
   // TASK 2
   // ---------------------
@@ -47,6 +47,5 @@ const headerAppender = (selector) => {
   //
 }
 
-headerAppender('.header-container');
 
 export { Header, headerAppender }
