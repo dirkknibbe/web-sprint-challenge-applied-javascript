@@ -55,12 +55,14 @@ const cardAppender = (selector) => {
   axios.get(`http://localhost:5000/api/articles`)
   .then(resp => {
     console.log(resp)
-    const { articles } = resp.data
-  Object.keys(articles).forEach( article =>{
-    console.log(articles[article])
     
+  const { articles } = resp.data
+
   })
-   
+  
+   Object.keys(articles).forEach( article =>{
+    console.log(articles[article])
+    articles.appendChild(articles[article])
     // 
     
   })
